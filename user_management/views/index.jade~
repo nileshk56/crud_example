@@ -1,0 +1,14 @@
+h1="Welcome "
+h3 #{username}
+
+table(cellpadding="10" border=1)
+  - each item in userdata
+    tr
+      td=item.username
+      td=item.first_name
+      td=item.last_name
+      td=item.email
+      td=item.age
+      td
+        a(href="/update?username=#{item.username}")="Edit"
+
